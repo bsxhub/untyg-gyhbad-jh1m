@@ -495,3 +495,65 @@
                 width: 100%;
             }
         }
+/* gallery */
+        .gallery {
+            padding: 5rem 2rem;
+            background: var(--light-color);
+        }
+    
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+    
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 20px;
+        }
+    
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+    
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+    
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+    
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(236, 28, 36, 0.9); /* Warna merah AIA dengan opacity */
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+    
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+    
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
