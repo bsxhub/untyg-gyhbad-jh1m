@@ -60,7 +60,7 @@
         const header = document.querySelector('.header');
         if (window.scrollY > 100) {
             header.style.padding = '0.5rem 0';
-            header.style.backgroundColor = 'rgba(0, 121, 107, 0.95)';
+            header.style.backgroundColor = '#ff4d4d';
         } else {
             header.style.padding = '1rem 0';
             header.style.backgroundColor = 'var(--primary-color)';
