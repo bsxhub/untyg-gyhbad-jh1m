@@ -290,46 +290,54 @@
         </div>
     </section>
 
-    <!-- Contact Section 
-    <section id="contact" class="section" style="background-color: #f9f9f9;">
-        <div class="container">
-            <h2 class="section-title">Hubungi Saya</h2>
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Nama Penuh</label>
-                        <input type="text" id="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">E-mel</label>
-                        <input type="email" id="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="form-label">No. Telefon</label>
-                        <input type="tel" id="phone" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service" class="form-label">Perkhidmatan yang Diminati</label>
-                        <select id="service" class="form-control" required>
-                            <option value="">-- Sila Pilih --</option>
-                            <option value="hibah">Hibah Takaful</option>
-                            <option value="medical">Medical Card</option>
-                            <option value="education">Simpanan & Pendidikan Anak</option>
-                            <option value="retirement">Persaraan & Income Protection</option>
-                            <option value="corporate">Corporate Takaful</option>
-                            <option value="career">Peluang Kerjaya Takaful</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Mesej</label>
-                        <textarea id="message" class="form-control" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Hantar Pertanyaan</button>
-                </form>
-            </div>
+<!-- Contact Section -->
+<section id="contact" class="section" style="background-color: #f9f9f9;">
+    <div class="container">
+        <h2 class="section-title">Borang Quotation Takaful</h2>
+        <div class="contact-form">
+            <form id="quotationForm" onsubmit="return sendQuotationToWhatsApp()">
+                <div class="form-group">
+                    <label for="nama" class="form-label">Nama Penuh</label>
+                    <input type="text" id="nama" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="tarikh" class="form-label">Tarikh Lahir</label>
+                    <input type="date" id="tarikh" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="nohp" class="form-label">No. Telefon</label>
+                    <input type="tel" id="nohp" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea id="alamat" class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="kerja" class="form-label">Pekerjaan</label>
+                    <input type="text" id="kerja" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="rokok" class="form-label">Status Merokok</label>
+                    <select id="rokok" class="form-control" required>
+                        <option value="">-- Sila Pilih --</option>
+                        <option value="Merokok">Merokok</option>
+                        <option value="Tidak Merokok">Tidak Merokok</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="jantina" class="form-label">Jantina</label>
+                    <select id="jantina" class="form-control" required>
+                        <option value="">-- Sila Pilih --</option>
+                        <option value="Lelaki">Lelaki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Hantar ke WhatsApp</button>
+            </form>
         </div>
-    </section>
--->
+    </div>
+</section>
+
     <!-- gallery -->
 <section class="gallery" id="gallery">
     <h2 class="gallery-title">Gallery Pencapaian</h2>
@@ -430,5 +438,32 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-564GMLMJ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <script>
+        function sendQuotationToWhatsApp() {
+            const phone = "60123456789"; // Gantikan dengan nombor WhatsApp anda
+        
+            const nama = document.getElementById("nama").value;
+            const tarikh = document.getElementById("tarikh").value;
+            const nohp = document.getElementById("nohp").value;
+            const alamat = document.getElementById("alamat").value;
+            const kerja = document.getElementById("kerja").value;
+            const rokok = document.getElementById("rokok").value;
+            const jantina = document.getElementById("jantina").value;
+        
+            const msg = `Assalamualaikum, saya ingin mendapatkan quotation. Berikut adalah maklumat saya:%0A` +
+                        `Nama: ${nama}%0A` +
+                        `Tarikh Lahir: ${tarikh}%0A` +
+                        `No. Telefon: ${nohp}%0A` +
+                        `Alamat: ${alamat}%0A` +
+                        `Pekerjaan: ${kerja}%0A` +
+                        `Status Merokok: ${rokok}%0A` +
+                        `Jantina: ${jantina}`;
+        
+            window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+            return false;
+        }
+        </script>
+        
 </body>
 </html>
