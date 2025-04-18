@@ -318,6 +318,16 @@
                     <input type="text" id="kerja" class="form-control" required>
                 </div>
                 <div class="form-group">
+                    <label for="plan" class="form-label">Pilih Plan</label>
+                    <select id="plan" class="form-control" required>
+                        <option value="">-- Sila Pilih --</option>
+                        <option value="Plan Hibah">Plan Hibah</option>
+                        <option value="Plan Perubatan">Plan Perubatan</option>
+                        <option value="Plan Pekerja">Plan Pekerja</option>
+                        <option value="Plan Investment">Plan Investment</option>
+                    </select>
+                </div>                
+                <div class="form-group">
                     <label for="rokok" class="form-label">Status Merokok</label>
                     <select id="rokok" class="form-control" required>
                         <option value="">-- Sila Pilih --</option>
@@ -481,6 +491,7 @@
             const nohp = document.getElementById("nohp").value;
             const alamat = document.getElementById("alamat").value;
             const kerja = document.getElementById("kerja").value;
+            const plan = document.getElementById("plan").value;
             const rokok = document.getElementById("rokok").value;
             const jantina = document.getElementById("jantina").value;
         
@@ -490,6 +501,7 @@
                         `No. Telefon: ${nohp}%0A` +
                         `Alamat: ${alamat}%0A` +
                         `Pekerjaan: ${kerja}%0A` +
+                        `Plan Dipilih: ${plan}%0A` +
                         `Status Merokok: ${rokok}%0A` +
                         `Jantina: ${jantina}`;
         
