@@ -291,7 +291,7 @@
     </section>
 
 <!-- Contact Section -->
-<section id="contact" class="section" style="background-color: #f9f9f9;">
+<section id="contact1" class="section" style="background-color: #f9f9f9;">
     <div class="container">
         <h2 class="section-title">Borang Quotation Takaful</h2>
         <div class="contact-form">
@@ -334,6 +334,38 @@
                 </div>
                 <button type="submit" class="btn">Hantar ke WhatsApp</button>
             </form>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact2" class="section" style="background-color: #f9f9f9;">
+    <div class="container">
+        <h2 class="section-title">Borang Quotation Takaful</h2>
+        <div class="contact-form">
+            <form id="recruitmentForm" onsubmit="return sendRecruitmentToWhatsApp()">
+                <div class="form-group">
+                    <label for="namapenuh" class="form-label">Nama Penuh</label>
+                    <input type="text" id="namapenuh" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="nohprekrut" class="form-label">No. Telefon</label>
+                    <input type="tel" id="nohprekrut" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="jantinarekrut" class="form-label">Jantina</label>
+                    <select id="jantinarekrut" class="form-control" required>
+                        <option value="">-- Sila Pilih --</option>
+                        <option value="Lelaki">Lelaki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pendidikan" class="form-label">Pendidikan Tertinggi</label>
+                    <input type="text" id="pendidikan" class="form-control" placeholder="Contoh: SPM / Diploma / Ijazah" required>
+                </div>
+                <button type="submit" class="btn">Hantar Maklumat</button>
+            </form>            
         </div>
     </div>
 </section>
@@ -464,6 +496,26 @@
             return false;
         }
         </script>
+
+<script>
+    function sendRecruitmentToWhatsApp() {
+        const phone = "60123456789"; // Gantikan dengan nombor WhatsApp anda
+    
+        const nama = document.getElementById("namapenuh").value;
+        const nohp = document.getElementById("nohprekrut").value;
+        const jantina = document.getElementById("jantinarekrut").value;
+        const pendidikan = document.getElementById("pendidikan").value;
+    
+        const msg = `Assalamualaikum, saya berminat dengan peluang kerjaya takaful. Berikut maklumat saya:%0A` +
+                    `Nama Penuh: ${nama}%0A` +
+                    `No. Telefon: ${nohp}%0A` +
+                    `Jantina: ${jantina}%0A` +
+                    `Pendidikan Tertinggi: ${pendidikan}`;
+    
+        window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+        return false;
+    }
+    </script>
 
 </body>
 </html>
