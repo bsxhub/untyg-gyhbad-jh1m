@@ -33,27 +33,6 @@
         });
     });
 
-    // Form submission handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For demo purposes, we'll just alert the user
-            alert(`Terima kasih ${name}! Pertanyaan anda telah dihantar. Saya akan menghubungi anda dalam masa 24 jam.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
-    }
 
     // Add scroll effect to header
     window.addEventListener('scroll', function() {
@@ -108,10 +87,9 @@ class TestimonialSlider {
     // Methods for slider functionality
 }
 
-//tambah
 
 function sendHibahToWhatsApp() {
-    const phone = "60149775244"; // Gantikan dengan nombor WhatsApp anda
+    const phone = "60149775244"; 
 
     const nama = document.getElementById("hh_nama").value;
     const nohp = document.getElementById("hh_hp").value;
@@ -161,7 +139,7 @@ function sendQuotationToWhatsApp() {
 
 
 function sendRecruitmentToWhatsApp() {
-    const phone = "60149775244"; // Gantikan dengan nombor WhatsApp anda
+    const phone = "60149775244";  
 
     const nama = document.getElementById("namapenuh").value;
     const nohp = document.getElementById("nohprekrut").value;
