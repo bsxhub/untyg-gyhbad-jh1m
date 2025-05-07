@@ -41,7 +41,7 @@
                     <li class="nav-item"><a href="#services" class="nav-link">Perkhidmatan</a></li>
                     <li class="nav-item"><a href="#career" class="nav-link">Kerjaya</a></li>
                     <li class="nav-item"><a href="#testimonials" class="nav-link">Testimoni</a></li>
-                    <li class="nav-item"><a href="#contact1" class="nav-link">Quotation</a></li>
+                    <li class="nav-item"><a href="#contact2" class="nav-link">Quotation</a></li>
                     <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
                 </ul>
             </nav>
@@ -291,55 +291,48 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact1" class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Permohonan Hibah Harta</h2>
+            <div class="contact-form">
+                <form id="hibahForm" onsubmit="return sendHibahToWhatsApp()">
+                    <div class="form-group">
+                        <label for="hh_nama" class="form-label">Nama Penuh</label>
+                        <input type="text" id="hh_nama" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hh_hp" class="form-label">No. Telefon</label>
+                        <input type="tel" id="hh_hp" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hh_lahir" class="form-label">Tarikh Lahir</label>
+                        <input type="date" id="hh_lahir" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hh_jantina" class="form-label">Jantina</label>
+                        <select id="hh_jantina" class="form-control" required>
+                            <option value="">-- Sila Pilih --</option>
+                            <option value="Lelaki">Lelaki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hh_harta" class="form-label">Jenis Harta</label>
+                        <input type="text" id="hh_harta" class="form-control" placeholder="Contoh: rumah, tanah, ASB" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hh_alamat" class="form-label">Alamat</label>
+                        <textarea id="hh_alamat" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Hantar Maklumat</button>
+                </form>            
+            </div>
+        </div>
+    </section>
+    
 <!-- Contact Section -->
 <section id="contact2" class="section" style="background-color: #f9f9f9;">
-    <div class="container">
-        <h2 class="section-title">PERMOHONAN HIBAH HARTA</h2>
-        <div class="contact-form">
-            <form id="formHibahHarta">
-                <div class="form-group">
-                  <label>Nama Penuh</label>
-                  <input type="text" id="hh_nama" class="form-control" required>
-                </div>
-
-                <div class="form-group">
-                  <label>No Telefon</label>
-                  <input type="tel" id="hh_hp" class="form-control" required>
-                </div>
-              
-                <div class="form-group">
-                  <label>Tarikh Lahir</label>
-                  <input type="date" id="hh_lahir" class="form-control" required>
-                </div>
-              
-                <div class="form-group">
-                  <label>Jantina</label>
-                  <select id="hh_jantina" class="form-control" required>
-                    <option value="">-- Sila Pilih --</option>
-                    <option value="Lelaki">Lelaki</option>
-                    <option value="Perempuan">Perempuan</option>
-                  </select>
-                </div>
-              
-                <div class="form-group">
-                  <label>Jenis Harta</label>
-                  <input type="text" id="hh_harta" class="form-control" placeholder="Contoh: rumah, tanah, ASB" required>
-                </div>
-              
-                <div class="form-group">
-                  <label>Alamat</label>
-                  <textarea id="hh_alamat" class="form-control" rows="3" required></textarea>
-                </div>
-              
-                <button type="submit" class="btn btn-primary">Hantar Permohonan</button>
-              </form>
-              
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact1" class="section" style="background-color: #f9f9f9;">
     <div class="container">
         <h2 class="section-title">Borang Quotation Takaful</h2>
         <div class="contact-form">
@@ -397,7 +390,7 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact2" class="section" style="background-color: #f9f9f9;">
+<section id="contact3" class="section" style="background-color: #f9f9f9;">
     <div class="container">
         <h2 class="section-title">Berminat menjadi Life Planner AIA ?</h2>
         <div class="contact-form">
@@ -524,81 +517,11 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-564GMLMJ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <script>
-        function sendQuotationToWhatsApp() {
-            const phone = "60149775244"; 
-        
-            const nama = document.getElementById("nama").value;
-            const tarikh = document.getElementById("tarikh").value;
-            const nohp = document.getElementById("nohp").value;
-            const alamat = document.getElementById("alamat").value;
-            const kerja = document.getElementById("kerja").value;
-            const plan = document.getElementById("plan").value;
-            const rokok = document.getElementById("rokok").value;
-            const jantina = document.getElementById("jantina").value;
-        
-            const msg = `Assalamualaikum, saya ingin mendapatkan quotation. Berikut adalah maklumat saya:%0A` +
-                        `Nama: ${nama}%0A` +
-                        `Tarikh Lahir: ${tarikh}%0A` +
-                        `No. Telefon: ${nohp}%0A` +
-                        `Alamat: ${alamat}%0A` +
-                        `Pekerjaan: ${kerja}%0A` +
-                        `Plan Dipilih: ${plan}%0A` +
-                        `Status Merokok: ${rokok}%0A` +
-                        `Jantina: ${jantina}`;
-        
-            window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
-            return false;
-        }
-        </script>
-
-<script>
-    function sendRecruitmentToWhatsApp() {
-        const phone = "60149775244"; // Gantikan dengan nombor WhatsApp anda
-    
-        const nama = document.getElementById("namapenuh").value;
-        const nohp = document.getElementById("nohprekrut").value;
-        const jantina = document.getElementById("jantinarekrut").value;
-        const pendidikan = document.getElementById("pendidikan").value;
-    
-        const msg = `Assalamualaikum, saya berminat dengan peluang kerjaya takaful. Berikut maklumat saya:%0A` +
-                    `Nama Penuh: ${nama}%0A` +
-                    `No. Telefon: ${nohp}%0A` +
-                    `Jantina: ${jantina}%0A` +
-                    `Pendidikan Tertinggi: ${pendidikan}`;
-    
-        window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
-        return false;
-    }
-    </script>
-<script>
-document.getElementById("formHibahHarta").addEventListener("submit", function(e) {
-    e.preventDefault();
-  
-    const nama = document.getElementById("hh_nama").value;
-    const hp = document.getElementById("hh_hp").value;
-    const lahir = document.getElementById("hh_lahir").value;
-    const jantina = document.getElementById("hh_jantina").value;
-    const harta = document.getElementById("hh_harta").value;
-    const alamat = document.getElementById("hh_alamat").value;
-  
-    const mesej = `PERMOHONAN HIBAH HARTA%0A
-  Nama: ${nama}%0A
-  No Telefon: ${hp}%0A
-  Tarikh Lahir: ${lahir}%0A
-  Jantina: ${jantina}%0A
-  Jenis Harta: ${harta}%0A
-  Alamat: ${alamat}`;
-  
-    const url = `https://wa.me/60149775244?text=${encodeURIComponent(mesej)}`;
-    window.open(url, "_blank");
-  });
-</script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-564GMLMJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
 </body>
 </html>

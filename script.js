@@ -107,3 +107,73 @@ class TestimonialSlider {
     
     // Methods for slider functionality
 }
+
+//tambah
+
+function sendHibahToWhatsApp() {
+    const phone = "60149775244"; // Gantikan dengan nombor WhatsApp anda
+
+    const nama = document.getElementById("hh_nama").value;
+    const nohp = document.getElementById("hh_hp").value;
+    const lahir = document.getElementById("hh_lahir").value;
+    const jantina = document.getElementById("hh_jantina").value;
+    const harta = document.getElementById("hh_harta").value;
+    const alamat = document.getElementById("hh_alamat").value;
+
+    const msg = `Assalamualaikum, saya ingin mohon hibah harta. Berikut adalah maklumat saya:%0A` +
+                `Nama Penuh: ${nama}%0A` +
+                `No. Telefon: ${nohp}%0A` +
+                `Tarikh Lahir: ${lahir}%0A` +
+                `Jantina: ${jantina}%0A` +
+                `Jenis Harta: ${harta}%0A` +
+                `Alamat: ${alamat}`;
+
+    window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+    return false;
+}
+
+
+function sendQuotationToWhatsApp() {
+    const phone = "60149775244"; 
+
+    const nama = document.getElementById("nama").value;
+    const tarikh = document.getElementById("tarikh").value;
+    const nohp = document.getElementById("nohp").value;
+    const alamat = document.getElementById("alamat").value;
+    const kerja = document.getElementById("kerja").value;
+    const plan = document.getElementById("plan").value;
+    const rokok = document.getElementById("rokok").value;
+    const jantina = document.getElementById("jantina").value;
+
+    const msg = `Assalamualaikum, saya ingin mendapatkan quotation. Berikut adalah maklumat saya:%0A` +
+                `Nama: ${nama}%0A` +
+                `Tarikh Lahir: ${tarikh}%0A` +
+                `No. Telefon: ${nohp}%0A` +
+                `Alamat: ${alamat}%0A` +
+                `Pekerjaan: ${kerja}%0A` +
+                `Plan Dipilih: ${plan}%0A` +
+                `Status Merokok: ${rokok}%0A` +
+                `Jantina: ${jantina}`;
+
+    window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+    return false;
+}
+
+
+function sendRecruitmentToWhatsApp() {
+    const phone = "60149775244"; // Gantikan dengan nombor WhatsApp anda
+
+    const nama = document.getElementById("namapenuh").value;
+    const nohp = document.getElementById("nohprekrut").value;
+    const jantina = document.getElementById("jantinarekrut").value;
+    const pendidikan = document.getElementById("pendidikan").value;
+
+    const msg = `Assalamualaikum, saya berminat dengan peluang kerjaya takaful. Berikut maklumat saya:%0A` +
+                `Nama Penuh: ${nama}%0A` +
+                `No. Telefon: ${nohp}%0A` +
+                `Jantina: ${jantina}%0A` +
+                `Pendidikan Tertinggi: ${pendidikan}`;
+
+    window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+    return false;
+}
